@@ -6,7 +6,7 @@
 	String str = "{";
 	int i = 0;
 	for(Entry<String, String[]> entry : map.entrySet()) {
-			
+		System.out.println("I am in loop");	
 		str += "\"" + entry.getKey() + "\":\"" + entry.getValue()[0] + "\"";
 		if(i < 1) {
 			str += ",";
@@ -16,6 +16,7 @@
 		}
 		i++;
 	}
+	System.out.println(str);
 	response.getWriter().print(str + "}");
 	//response.getWriter().print("{\"name\" : \"puneet\"}");
 %>
